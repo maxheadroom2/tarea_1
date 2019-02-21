@@ -1,0 +1,185 @@
+body::after {
+  /**
+  * No hay una propiedad de CSS de fondo-opacidad, pero se puede falsificar
+  * insertando un pseudo elemento con opacidad regular del tamaño exacto del
+  * elemento detrás de él.
+  */
+  z-index    : -1;
+  content    : "";
+  position   : absolute;
+  top        : 0;
+  right      : 0;
+  bottom     : 0;
+  left       : 0;
+  opacity    : 0.5;
+  background : url("River_of_Blue.jpg");
+}
+
+.login_cuadro_back {
+  width      : 450px;
+  height     : 550px;
+  margin     : 200px auto auto auto;
+  opacity    : 0.5;
+  background : #191a1c;
+}
+
+.cuadro_principal {
+  width      : 98%;
+  height     : 950px;
+  margin     : 10px auto auto auto;
+  background : rgba(255, 255, 255, 1);
+}
+
+.cuadro_tabla {
+  width      : 452px;
+  height     : 700px;
+  float      : right;
+  margin     : -21% 20px 200px 0px;
+  background : rgba(97, 172, 200, 0.98);
+}
+
+.botton_2 {
+  margin-top    : 50px;
+  margin-bottom : 50px;
+}
+
+#f-light {
+  position    : relative;
+  left        : 50%;
+  margin-left : -187px;
+  color       : rgb(255, 255, 255);
+  font-family : Verdana,
+                sans-serif;
+  font-size   : 18px;
+  line-height : 5.5;
+}
+
+#f-bold {
+  position    : relative;
+  left        : 50%;
+  margin-left : -159px;
+  padding     : 109px;
+  color       : rgb(255, 255, 255);
+  text-align  : center;
+  font-family : Verdana,
+                sans-serif;
+  font-size   : 15px;
+  font-weight : bold;
+  line-height : 5.5;
+}
+
+input {
+  display          : block;
+  position         : relative;
+  top              : 50%;
+  left             : 50%;
+  width            : 65%;
+  margin-left      : -162px;
+  padding          : 10px;
+  color            : rgb(255, 255, 255);
+  border           : none;
+  border-bottom    : 2px solid #f76e6e;
+  background-color : rgba(#7c42d7, 0);
+  font-family      : Verdana,
+                     sans-serif;
+  font-size        : 15px;
+  line-height      : 1.5;
+}
+
+button {
+  display          : block;
+  position         : relative;
+  top              : 8%;
+  left             : 50%;
+  width            : 65%;
+  margin-left      : -147px;
+  padding          : 10px;
+  color            : rgb(255, 255, 255);
+  border           : none;
+  border-bottom    : 2px #f76e6e;
+  border-radius    : 40px;
+  background-color : #f76e6e;
+  font-family      : Verdana,
+                     sans-serif;
+  font-size        : 15px;
+  line-height      : 1.5;
+}
+
+a {
+  position    : absolute;
+  top         : 68%;
+  left        : 50%;
+  margin-left : -187px;
+  color       : #ffffff;
+  font-family : Verdana,
+                sans-serif;
+  font-size   : 12px;
+  line-height : 5.5;
+}
+
+.B_arriba {
+  height           : 110px;
+  margin-left      : 0px;
+  border           : 1px solid #3193ed;
+  background-color : #3193ed;
+}
+
+.B_medio {
+  height           : 730px;
+  margin-left      : 0px;
+  border           : 1px solid #dddddd;
+  background-color : #dddddd;
+}
+
+.B_abajo {
+  height           : 110px;
+  margin-left      : 0px;
+  border           : 1px solid #3193ed;
+  background-color : #3193ed;
+}
+
+h1,
+p {
+  color       : rgb(255, 255, 255);
+  font-family : Verdana,
+                sans-serif;
+  font-size   : 12px;
+}
+
+.titulo {
+  margin-top  : 28px;
+  margin-left : 10px;
+  text-align  : left;
+  font-size   : 45px;
+}
+
+.F_medio {
+  margin-top   : 109px;
+  margin-right : 498px;
+  margin-left  : 291px;
+  color        : rgb(39, 44, 45);
+  text-align   : justify;
+  font-family  : Verdana,
+                 sans-serif;
+  font-size    : 15px;
+}
+
+.F_medio_H1 {
+  margin-right : 28px;
+  margin-left  : 10px;
+  color        : rgb(39, 44, 45);
+  text-align   : justify;
+  font-family  : Verdana,
+                 sans-serif;
+  font-size    : 15px;
+}
+
+img {
+  width       : 250px;
+  height      : 600px;
+  float       : left;
+  margin-left : 10px;
+  object-fit  : cover;
+}
+
+/* https://webdesign.tutsplus.com/es/tutorials/css-experiments-with-a-search-form-input-and-button--cms-22069 */
