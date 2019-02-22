@@ -1,0 +1,81 @@
+body,
+div {
+  font-family : 'Quicksand',
+                sans-serif;
+}
+
+p {
+  display         : flex;
+  color           : #bebdbb;
+  align-items     : center;
+  justify-content : space-between;
+}
+
+label {
+  margin-right : 30px;
+  color        : #bebdbb;
+}
+
+/*! revisar mas datos aqui  https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas */
+
+#page-login {
+  display               : grid;
+  width                 : 100vw;
+  height                : 100vh;
+  margin                : 0;
+  padding               : 0;
+  grid-column-gap       : 0;
+  grid-row-gap          : 0;
+  grid-template-columns : 35rem auto 35rem;
+  grid-template-rows    : 11rem auto 11rem;
+  grid-template-areas   : "nav-i head nav-d"
+                          "nav-i main nav-d"
+                          "nav-i foot nav-d";
+}
+
+.input {
+  display        : flex;
+  height         : 19vh;
+  align-items    : center;
+  flex-direction : row;
+  flex-wrap      : wrap;
+}
+
+#page-login > header {
+  display         : flex;
+  align-items     : center;
+  justify-content : space-around;
+  grid-area       : head;
+}
+
+#page-login > #nav-i {
+  display         : flex;
+  align-items     : center;
+  justify-content : space-around;
+  grid-area       : nav-i;
+}
+
+#page-login > #nav-d {
+  display         : flex;
+  align-items     : center;
+  justify-content : space-around;
+  grid-area       : nav-d;
+}
+
+#page-login > main {
+  display          : flex;
+  min-width        : 400px;
+  background-color : #171716;
+  align-items      : center;
+  flex-direction   : column;
+  flex-wrap        : wrap;
+  grid-area        : main;
+  /*!  justify-content : space-around; centrar verticalmente */
+}
+
+#page-login > footer {
+  display         : flex;
+  align-items     : center;
+  justify-content : space-around;
+  grid-area       : foot;
+}
