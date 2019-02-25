@@ -4,43 +4,67 @@
 <head>
   <meta charset="utf-8">
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
-  <script src="js.js" charset="utf-8"></script>
-  <title></title>
+  <script src="materialize/js/materialize.min.js"></script>
+  <script>
+function loginEnter() {
+   M.toast({html: 'No hay conexion con el servidor'})
+}
+</script>
 </head>
 
-<body onload="javascript:size()">
-
-  <div class="contenedor">
+<body>
+  <div class="container">
     <!-- para agregar con emmet estos puntos seria asi div.box-$*9.box*9>{box$} -->
-
     <section id="page-login">
+
       <header>
         <p></p>
       </header>
-      <nav id="nav-d">
-        <p></p>
-      </nav>
+
       <main>
-        <p>Iniciar sesion</p>
-        <div class="input">
-          <label  for="usuario">Usuario</label><input type="text" name="nombre" value="">
-        </div>
-        <div class="input">
-          <label  for="Contraseña">Contraseña</label><input type="text" name="pass" value="">
-        </div>
+        <form class="" action="index.html" method="post">
+
+
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate active">
+                  <label for="icon_prefix">Nombre de usaurio</label>
+                </div>
+                <div class="input-field col s12">
+                  <p></p>
+                </div>
+                <div class="input-field col s12">
+                  <p></p>
+                </div>
+                <div class="input-field col s12">
+                  <p></p>
+                </div>
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">visibility</i>
+                  <input id="visibility" type="password" class="validate active" data-length="10">
+                  <label for="visibility">Password</label>
+                </div>
+                <div class="input-field col s12 center">
+                  <a onclick="loginEnter()" class="btn waves-effect waves-light btn-large pink darken-1"><i class="material-icons right">send</i>Aceptar</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </form>
       </main>
-      <nav id="nav-i">
-        <p></p>
-      </nav>
+
       <footer>
         <p></p>
       </footer>
+
     </section>
-
   </div>
-
 </body>
 
 </html>
