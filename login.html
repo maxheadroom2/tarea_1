@@ -5,9 +5,10 @@
   <meta charset="utf-8">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css.css">
-  <script src="materialize/js/materialize.js"></script>
+  <link rel="stylesheet" href="/css/master.css">
+  <script src="materialize/js/materialize.min.js"></script>
   <script>
     function loginEnter() {
       M.toast({
@@ -21,7 +22,20 @@
       M.CharacterCounter.init(textNeedCount);
     });
   </script>
-</head>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.fixed-action-btn');
+      var instances = M.FloatingActionButton.init(elems, {
+        toolbarEnabled: true
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.modal').modal();
+      $('#modal1').on('click', function() {});
+    });
+  </script>
 
 <body>
   <div class="container">
@@ -55,14 +69,23 @@
                   <i class="material-icons prefix">visibility</i>
                   <input id="input_text" type="password" class="validate active" data-length="10">
                   <label>Password</label>
+                  </divdiv>
+                  <div class="input-field col s12 center">
+                    <a onclick="loginEnter()" class="pulse btn waves-light btn-large grey darken-3"><i class="material-icons right">send</i>Aceptar</a>
+                  </div>
+
+                  <div class="col s12 lefth">
+                    <div class="fixed-action-btn toolbar">
+                      <a class="btn-floating btn-large light-blue">
+                        <i class="large material-icons">help</i>
+                      </a>
+                      <ul>
+                        <li><a class="btn-floating">Restablecer la contraseña<i class="material-icons">insert_chart</i></a></li>
+                      </ul>
+                    </div>
+
+                  </div>
                 </div>
-                <div class="input-field col s12 center">
-                  <a onclick="loginEnter()" class="pulse btn waves-effect waves-light btn-large pink darken-1"><i class="material-icons right">send</i>Aceptar</a>
-                </div>
-                <div class="col s12 lefth">
-                  
-                </div>
-              </div>
             </form>
           </div>
           </form>
