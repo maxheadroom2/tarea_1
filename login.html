@@ -5,14 +5,22 @@
   <meta charset="utf-8">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection" />
   <link rel="stylesheet" href="css.css">
-  <script src="materialize/js/materialize.min.js"></script>
+  <script src="materialize/js/materialize.js"></script>
   <script>
-function loginEnter() {
-   M.toast({html: 'No hay conexion con el servidor'})
-}
-</script>
+    function loginEnter() {
+      M.toast({
+        html: 'No hay conexion con el servidor'
+      })
+    }
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var textNeedCount = document.querySelectorAll('#input_text, #textarea1');
+      M.CharacterCounter.init(textNeedCount);
+    });
+  </script>
 </head>
 
 <body>
@@ -25,16 +33,14 @@ function loginEnter() {
       </header>
 
       <main>
-        <form class="" action="index.html" method="post">
-
-
+        <div class="row">
           <div class="row">
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">account_circle</i>
-                  <input id="icon_prefix" type="text" class="validate active">
-                  <label for="icon_prefix">Nombre de usaurio</label>
+                  <input id="input_text" type="text" class="validate active" data-length="10">
+                  <label>Nombre de usaurio</label>
                 </div>
                 <div class="input-field col s12">
                   <p></p>
@@ -47,16 +53,19 @@ function loginEnter() {
                 </div>
                 <div class="input-field col s12">
                   <i class="material-icons prefix">visibility</i>
-                  <input id="visibility" type="password" class="validate active" data-length="10">
-                  <label for="visibility">Password</label>
+                  <input id="input_text" type="password" class="validate active" data-length="10">
+                  <label>Password</label>
                 </div>
                 <div class="input-field col s12 center">
-                  <a onclick="loginEnter()" class="btn waves-effect waves-light btn-large pink darken-1"><i class="material-icons right">send</i>Aceptar</a>
+                  <a onclick="loginEnter()" class="pulse btn waves-effect waves-light btn-large pink darken-1"><i class="material-icons right">send</i>Aceptar</a>
+                </div>
+                <div class="col s12 lefth">
+                  
                 </div>
               </div>
             </form>
           </div>
-        </form>
+          </form>
       </main>
 
       <footer>
